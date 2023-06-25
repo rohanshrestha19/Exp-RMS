@@ -25,6 +25,9 @@ import Otp from "./Login/Otp";
 import Categories from "./Pages/Products/Categories";
 import Bookatable from "./Pages/Bookatable";
 import { menuData } from "./Data/data";
+import { momoData } from "./Data/categorydata";
+
+import Momo from "./Pages/Products/Category/Momo";
 
 
 function App() {
@@ -39,22 +42,26 @@ function App() {
           <Route path="feature" element={<Feature />} />
           <Route path="profile" element={<Profile />} />
           <Route path="gallery" element={<Gallery />} />
+
           <Route path="products" element={<Products />} />
           <Route path="product" element={<Product />} />
           
           <Route path="menu" element={<Menu menuDataItem={menuData} />} />
           <Route path="cart" element={<Cart />} />
           <Route path="productdetails/:id" element={<Productdetails menuDataItem={menuData}/>} />
+          <Route path="momo" element={<Momo momoDataItem={momoData}/>} />
           
           <Route path="Team" element={<Team />} />
           <Route path="testimonial" element={<Testimonial />} />
+         
           <Route path="register" element={<Register />} />
           <Route path="login" element={<Login />} />
           <Route path="forgetpassword" element={<ForgetPassword />} />
           <Route path="otp" element={<Otp />} />
           
           <Route path="*" element={<Error />} />
-          <Route path="categories" element={<Categories menuDataItem={menuData} />} />
+         
+          <Route path="categories" element={<Categories />} />
           <Route path="bookatable" element={<Bookatable />} />
 
         </Routes>

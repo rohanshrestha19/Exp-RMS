@@ -1,113 +1,38 @@
-import React  from "react";
-
+import React from "react";
 
 import { Link } from "react-router-dom";
+import Categories from "../Categories";
 
 
-
-const Momo = () => {
-  // const [showNotification, setShowNotification] = useState(false);
-
-  // const handleAddToCart = () => {
-  //   setShowNotification(true);
-  //   setTimeout(() => {
-  //     setShowNotification(false);
-  //   }, 20000); // Hide the notification after 2 seconds
-  // };
+const Momo = ({ momoDataItem }) => {
   return (
-    <div className="product-page-wrapper">
-      <p className="primary-heading1">Steam Momo</p>
+    <>
+      <Categories />
 
-      <div class="all-products">
-        <div class="product">
-          <img src=""  alt=""/>
+      <div className="row m-0 p-4">
+        <div className="all-products">
+          {momoDataItem.map((props) => (
+            <div className="product" key={props.id}>
+              <img src={props.menuimageurl} alt="" />
+              <div className="product-info">
+                <Link
+                  to={`/productdetails/${props.id}`}
+                  className="product-title"
+                >
+                  {props.menuname}
+                </Link>
+                
 
-          <div class="product-info">
-            <Link to="/productdetails" className="product-title">
-              Momo Food
-            </Link>
-            <p class="product-price">129</p>
-            <Link
-              to="/cart"
-              className="primary-button"
-              // onClick={handleAddToCart}
-            >
-              Add to Cart
-            </Link>
-            {/* {showNotification && (
-              <div className="notification">Item added to cart!</div>
-            )} */}
-          </div>
+                <p className="product-price">{props.menuprice}</p>
+                <Link to="/cart" className="primary-button">
+                  Add to Cart
+                </Link>
+              </div>
+            </div>
+          ))}
         </div>
-
-        <div class="product">
-        <img src=""  alt=""/>
-
-          <div class="product-info">
-            <Link to="/productdetails" className="product-title">
-              Momo Food
-            </Link>
-            <p class="product-price">129</p>
-            <Link
-              to="/cart"
-              className="primary-button"
-              // onClick={handleAddToCart}
-            >
-              Add to Cart
-            </Link>
-            {/* {showNotification && (
-              <div className="notification">Item added to cart!</div>
-            )} */}
-          </div>
-        </div>
-
-        <div class="product">
-        <img src=""  alt=""/>
-
-          <div class="product-info">
-            <Link to="/productdetails" className="product-title">
-              Momo Food
-            </Link>
-            <p class="product-price">129</p>
-            <Link
-              to="/cart"
-              className="primary-button"
-              // onClick={handleAddToCart}
-            >
-              Add to Cart
-            </Link>
-            {/* {showNotification && (
-              <div className="notification">Item added to cart!</div>
-            )} */}
-          </div>
-        </div>
-
-        <div class="product">
-        <img src=""  alt=""/>
-
-          <div class="product-info">
-            <Link to="/productdetails" className="product-title">
-              Momo 
-            </Link>
-            <p class="product-price">129</p>
-            <Link
-              to="/cart"
-              className="primary-button"
-              // onClick={handleAddToCart}
-            >
-              Add to Cart
-            </Link>
-            {/* {showNotification && (
-              <div className="notification">Item added to cart!</div>
-            )} */}
-          </div>
-        </div>
-
-        </div>
-        
-       
-         
-    </div>
+      </div>
+    </>
   );
 };
 

@@ -117,7 +117,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import { menuData } from "../../Data/data";
+
 // import HomeIcon from "@mui/icons-material/Home";
 
 const Categories = () => {
@@ -126,7 +126,7 @@ const Categories = () => {
     {
       text: "All",
 
-      path: "/",
+      path: "/menu",
     },
 
     {
@@ -137,7 +137,7 @@ const Categories = () => {
     {
       text: "Momo",
 
-      path: "/",
+      path: "/momo",
     },
     {
       text: "Burger",
@@ -160,15 +160,15 @@ const Categories = () => {
     },
   ];
 
-  const [ setmenuDataItem] = useState(menuData);
+  // const [ setmenuDataItem] = useState(menuData);
 
 
-  const filtermenuDataItem = (menuCategory) => {
-      const filteredmenuDataItems = menuData.filter((currentElement) => {
-          return currentElement.menuCategory === menuCategory;
-      })
-      setmenuDataItem(filteredmenuDataItems);
-  }
+  // const filtermenuDataItem = (menuCategory) => {
+  //     const filteredmenuDataItems = menuData.filter((currentElement) => {
+  //         return currentElement.menuCategory === menuCategory;
+  //     })
+  //     setmenuDataItem(filteredmenuDataItems);
+  // }
 
   return (
     <>
@@ -179,30 +179,25 @@ const Categories = () => {
             <span>Categories</span>
           </div>
 
-          <button className="nav-link border-bottom border-dark" type="button"
-         onClick={() => setmenuDataItem(menuData)}
-          
-          >
+          <Link className="nav-link border-bottom border-dark" to="/menu">
             <span>All</span>
+          </Link>  
 
-          </button>  
 
-
-          <button className="nav-link border-bottom border-dark" 
-          onClick={() => filtermenuDataItem("Top Selling")}
-          >
+          <Link className="nav-link border-bottom border-dark" to="/">
             <span>Top Selling</span>
-          </button>
+          </Link>
 
-          <button className="nav-link border-bottom border-dark"
-          onClick={() => filtermenuDataItem("Momo")}
-          >
-            Momo
-          </button>
 
-          <Link className="nav-link border-bottom border-dark">
+          <Link className="nav-link border-bottom border-dark" to="/momo">
+            <span>Momo</span>
+          </Link>
+
+
+          <Link className="nav-link border-bottom border-dark" to="/">
             <span>Burger</span>
           </Link>
+
 
           <Link className="nav-link border-bottom border-dark" to="/">
             <span>Spring Roll</span>
