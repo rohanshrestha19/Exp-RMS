@@ -132,7 +132,7 @@ const Categories = () => {
     {
       text: "Top Selling",
 
-      path: "/top selling",
+      path: "/topselling",
     },
     {
       text: "Momo",

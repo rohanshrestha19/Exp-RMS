@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Categories from "../../Categories";
 
 
-const Momo = ({ momoDataItem }) => {
+const Topselling = ({ topsellingDataItem }) => {
 
  
 
@@ -14,19 +14,19 @@ const Momo = ({ momoDataItem }) => {
 
       <div className="row m-0 p-4">
         <div class="all-products">
-          <p className="primary-heading1">Momo</p>
+          <p className="primary-heading1">Top selling </p>
         </div>
 
         <div className="all-products">
-          {momoDataItem.map((props) => (
+          {topsellingDataItem.map((props) => (
             <div className="product" key={props.id}>
-              <img src={props.momoimageurl} alt="" />
+              <img src={props.tsimageurl} alt="" />
               <div className="product-info">
-                <Link to={`/momodetails/${props.id}`} className="product-title">
-                  {props.momoname}
+                <Link to={`/topsellingdetails/${props.id}`} className="product-title">
+                  {props.tsname}
                 </Link>
 
-                <p className="product-price">{props.momoprice}</p>
+                <p className="product-price">{props.tsprice}</p>
                 <Link to="/cart" className="primary-button">
                   Add to Cart
                 </Link>
@@ -41,4 +41,4 @@ const Momo = ({ momoDataItem }) => {
   );
 };
 
-export default Momo;
+export default Topselling;

@@ -10,14 +10,14 @@ import { Link } from "react-router-dom";
 import { AiFillStar } from "react-icons/ai";
 import Box from "@mui/material/Box";
 import Rating from "@mui/material/Rating";
-import { momoData } from "../../../../Data/categorydata";
+import { topsellingData } from "../../../../Data/categorydata";
 
-const Momodetails = () => {
+const Topsellingdetails = () => {
   const [value, setValue] = React.useState(2);
 
   const { id } = useParams();
-  const momo = momoData.find((momo) => momo.id === id);
-  const { momoname, momoprice, momodescription, momoimageurl } = momo;
+  const ts = topsellingData.find((ts) => ts.id === id);
+  const { tsname, tsprice, tsdescription, tsimageurl } = ts;
 
   const [quantity ,setQuantity] = useState(1);
 
@@ -42,11 +42,11 @@ const Momodetails = () => {
         <div className="productdetails-container">
           <div className="productdetails-section-container">
             <div className="productdetails-section-image-container">
-              <img src={momoimageurl} alt="" />
+              <img src={tsimageurl} alt="" />
             </div>
             <div className="productdetails-section-text-container">
-              <h1 className="primary-heading">{momoname}</h1>
-              <p className="primary-text">{momodescription}</p>
+              <h1 className="primary-heading">{tsname}</h1>
+              <p className="primary-text">{tsdescription}</p>
               <div className="stars-container">
                 <AiFillStar />
                 <AiFillStar />
@@ -55,7 +55,7 @@ const Momodetails = () => {
                 <AiFillStar />
               </div>
 
-              <h2 className="product-price1">{momoprice}</h2>
+              <h2 className="product-price1">{tsprice}</h2>
              
 
               <div className="quantity">
@@ -185,4 +185,4 @@ const Momodetails = () => {
   );
 };
 
-export default Momodetails;
+export default Topsellingdetails;

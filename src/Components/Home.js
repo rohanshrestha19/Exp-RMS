@@ -64,7 +64,7 @@ const Home = () => {
 
     
      
-      <div class="all-products"> 
+      <div className="all-products"> 
 
       <p className="primary-heading1">Appetizers</p>
       </div>
@@ -77,14 +77,14 @@ const Home = () => {
 
 
       
-      <div class="home-products">
+      <div className="home-products">
       <p className="primary-heading1">Beverage</p>
       </div>
       <Carousel responsive={responsive}>
         {product}
       </Carousel>
        
-      <div class="home-products">
+      <div className="home-products">
       <p className="primary-heading1">Breakfast</p>
       </div>
       <Carousel responsive={responsive}>

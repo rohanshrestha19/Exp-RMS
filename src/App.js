@@ -11,6 +11,7 @@ import Products from "./Pages/Products/Menu/Products";
 import Profile from "./Pages/Profile";
 import Gallery from "./Pages/Gallery";
 import Productdetails from "./Pages/Products/Menu/Productdetails";
+
 import Error from "./Pages/Error";
 import Team from "./Pages/Team";
 import Feature from "./Pages/Feature";
@@ -25,10 +26,15 @@ import Otp from "./Login/Otp";
 import Categories from "./Pages/Products/Categories";
 import Bookatable from "./Pages/Bookatable";
 import { menuData } from "./Data/data";
-import { momoData } from "./Data/categorydata";
+import { momoData, topsellingData } from "./Data/categorydata";
+
+
 
 import Momo from "./Pages/Products/Category/Momo/Momo";
 import Momodetails from "./Pages/Products/Category/Momo/Momodetails"
+import Topselling from "./Pages/Products/Category/Topselling/Topselling";
+import Topsellingdetails from "./Pages/Products/Category/Topselling/Topsellingdetails";
+
 
 function App() {
   return (
@@ -46,14 +52,22 @@ function App() {
           <Route path="products" element={<Products />} />
           <Route path="product" element={<Product />} />
           
-          <Route path="menu" element={<Menu menuDataItem={menuData} />} />
+          
           <Route path="cart" element={<Cart />} />
 
           <Route path="productdetails/:id" element={<Productdetails menuDataItem={menuData}/>} />
           <Route path="momodetails/:id" element={<Momodetails momoDataItem={momoData}/>} />
-
-          <Route path="momo" element={<Momo momoDataItem={momoData}/>} />
           
+
+          <Route path="menu" element={<Menu menuDataItem={menuData} />} />
+
+          <Route path="momo" element={<Momo momoDataItem={momoData} />} />
+
+          <Route path="topselling" element={<Topselling topsellingDataItem={topsellingData} />} />
+          <Route path="topsellingdetails/:id" element={<Topsellingdetails topsellingDataItem={topsellingData} />} />
+
+
+            
           <Route path="Team" element={<Team />} />
           <Route path="testimonial" element={<Testimonial />} />
          
