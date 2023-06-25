@@ -2,6 +2,19 @@
 ### `Minor Project II `
 ### `BCIS 6th Sem 2023`
 
+
+# Technology
+<h2>Technologies Used</h2>
+<ul>
+<li>HTML</li>
+</ul><ul>
+<li>CSS</li>
+</ul><ul>
+<li>JavaScript</li>
+</ul><ul>
+<li>ReactJS</li>
+</ul>
+
 # Getting Started with Create React App
 This project was bootstrapped with Create React App.
 
