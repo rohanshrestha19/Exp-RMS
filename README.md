@@ -1,5 +1,6 @@
 # RMS
-### `Minor Project II` 
+### `Minor Project II `
+### `BCIS 6th Sem 2023`
 
 # Getting Started with Create React App
 This project was bootstrapped with Create React App.
