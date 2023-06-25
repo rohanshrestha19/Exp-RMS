@@ -1,7 +1,7 @@
 import React from "react";
 
 import AboutBackgroundImage from "../Asset/AboutBackgroundImage.svg";
-import AboutImage from "../Asset/About.svg";
+
 import Team from "./Team";
 
 const About = () => {

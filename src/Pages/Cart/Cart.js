@@ -1,8 +1,25 @@
 import React from "react";
+import { useState } from "react";
+
 import Navbar from "../../Components/Navbar";
-import BannerImage from "../../Asset/AboutBackgroundImage.svg";
+import Food from "../../Asset/food.jpeg";
 
 const Cart = () => {
+  
+  const [quantity ,setQuantity] = useState(1);
+
+  const handleDecrement =()=>{
+    if(quantity > 1){
+    setQuantity(preCount => preCount -1);
+    }
+    }
+
+    const handleIncrement =()=>{
+      if(quantity < 20){
+      setQuantity(preCount => preCount + 1);
+      }
+      }
+
   return (
     <div classNameNameName="home-container">
       <Navbar />
@@ -24,7 +41,7 @@ const Cart = () => {
                   <div className="row d-flex justify-content-between align-items-center">
                     <div className="col-md-2 col-lg-2 col-xl-2">
                       <img
-                        src={BannerImage}
+                        src={Food}
                         className="img-fluid rounded-3"
                         alt=""
                       />
@@ -33,28 +50,20 @@ const Cart = () => {
                       <p className="lead fw-normal mb-2">Momo</p>
                     </div>
                     <div className="col-md-3 col-lg-3 col-xl-2 d-flex">
-                      <button
-                        className="btn btn-link px-2"
-                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                      >
-                        <i className="fas fa-minus"></i>
-                      </button>
+                    <div className="input-group w-100">
+                <button type="button" onClick={ handleDecrement} className="input-group-text">-</button>
+                <div className="form-control text-center">{quantity}</div>
+                <button type="button" onClick={handleIncrement} className="input-group-text">+</button>
 
-                      <input
-                        id="form1"
-                        min="0"
-                        name="quantity"
-                        value="2"
-                        type="number"
-                        className="form-control form-control-sm"
-                      />
+              </div>
+                     
 
                       <button className="btn btn-link px-2" onclick="">
                         <i className="fas fa-plus"></i>
                       </button>
                     </div>
                     <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                      <h5 className="mb-0">499.00</h5>
+                      <h5 className="mb-0">170</h5>
                     </div>
                     <div className="col-md-1 col-lg-1 col-xl-1 text-end">
                       <a href="#!" className="text-danger">
@@ -70,7 +79,7 @@ const Cart = () => {
                   <div className="row d-flex justify-content-between align-items-center">
                     <div className="col-md-2 col-lg-2 col-xl-2">
                       <img
-                        src={BannerImage}
+                        src={Food}
                         className="img-fluid rounded-3"
                         alt=""
                       />
@@ -79,28 +88,20 @@ const Cart = () => {
                       <p className="lead fw-normal mb-2">Momo</p>
                     </div>
                     <div className="col-md-3 col-lg-3 col-xl-2 d-flex">
-                      <button
-                        className="btn btn-link px-2"
-                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                      >
-                        <i className="fas fa-minus"></i>
-                      </button>
+                    <div className="input-group w-100">
+                <button type="button" onClick={ handleDecrement} className="input-group-text">-</button>
+                <div className="form-control text-center">{quantity}</div>
+                <button type="button" onClick={handleIncrement} className="input-group-text">+</button>
 
-                      <input
-                        id="form1"
-                        min="0"
-                        name="quantity"
-                        value="2"
-                        type="number"
-                        className="form-control form-control-sm"
-                      />
+              </div>
+                     
 
                       <button className="btn btn-link px-2" onclick="">
                         <i className="fas fa-plus"></i>
                       </button>
                     </div>
                     <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                      <h5 className="mb-0">499.00</h5>
+                      <h5 className="mb-0">170</h5>
                     </div>
                     <div className="col-md-1 col-lg-1 col-xl-1 text-end">
                       <a href="#!" className="text-danger">
@@ -111,97 +112,8 @@ const Cart = () => {
                 </div>
               </div>
 
-              <div className="card rounded-3 mb-4">
-                <div className="card-body p-4">
-                  <div className="row d-flex justify-content-between align-items-center">
-                    <div className="col-md-2 col-lg-2 col-xl-2">
-                      <img
-                        src={BannerImage}
-                        className="img-fluid rounded-3"
-                        alt=""
-                      />
-                    </div>
-                    <div className="col-md-3 col-lg-3 col-xl-3">
-                      <p className="lead fw-normal mb-2">Momo</p>
-                    </div>
-                    <div className="col-md-3 col-lg-3 col-xl-2 d-flex">
-                      <button
-                        className="btn btn-link px-2"
-                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                      >
-                        <i className="fas fa-minus"></i>
-                      </button>
+            
 
-                      <input
-                        id="form1"
-                        min="0"
-                        name="quantity"
-                        value="2"
-                        type="number"
-                        className="form-control form-control-sm"
-                      />
-
-                      <button className="btn btn-link px-2" onclick="">
-                        <i className="fas fa-plus"></i>
-                      </button>
-                    </div>
-                    <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                      <h5 className="mb-0">499.00</h5>
-                    </div>
-                    <div className="col-md-1 col-lg-1 col-xl-1 text-end">
-                      <a href="#!" className="text-danger">
-                        <i className="fas fa-trash fa-lg"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="card rounded-3 mb-4">
-                <div className="card-body p-4">
-                  <div className="row d-flex justify-content-between align-items-center">
-                    <div className="col-md-2 col-lg-2 col-xl-2">
-                      <img
-                        src={BannerImage}
-                        className="img-fluid rounded-3"
-                        alt=""
-                      />
-                    </div>
-                    <div className="col-md-3 col-lg-3 col-xl-3">
-                      <p className="lead fw-normal mb-2">Momo</p>
-                    </div>
-                    <div className="col-md-3 col-lg-3 col-xl-2 d-flex">
-                      <button
-                        className="btn btn-link px-2"
-                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                      >
-                        <i className="fas fa-minus"></i>
-                      </button>
-
-                      <input
-                        id="form1"
-                        min="0"
-                        name="quantity"
-                        value="2"
-                        type="number"
-                        className="form-control form-control-sm"
-                      />
-
-                      <button className="btn btn-link px-2" onclick="">
-                        <i className="fas fa-plus"></i>
-                      </button>
-                    </div>
-                    <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                      <h5 className="mb-0">499.00</h5>
-                    </div>
-                    <div className="col-md-1 col-lg-1 col-xl-1 text-end">
-                      <a href="#!" className="text-danger">
-                        <i className="fas fa-trash fa-lg"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
               {/* 
         <div className="d-flex justify-content-between p-2 mb-2" style={{backgroundColor: '#e1f5fe' }}>
                   <h5 className="fw-bold mb-0">Total:</h5>
