@@ -3,11 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Categories from "../../Categories";
 
-
 const Topselling = ({ topsellingDataItem }) => {
-
- 
-
   return (
     <>
       <Categories />
@@ -22,7 +18,10 @@ const Topselling = ({ topsellingDataItem }) => {
             <div className="product" key={props.id}>
               <img src={props.tsimageurl} alt="" />
               <div className="product-info">
-                <Link to={`/topsellingdetails/${props.id}`} className="product-title">
+                <Link
+                  to={`/topsellingdetails/${props.id}`}
+                  className="product-title"
+                >
                   {props.tsname}
                 </Link>
 
@@ -35,8 +34,6 @@ const Topselling = ({ topsellingDataItem }) => {
           ))}
         </div>
       </div>
-
-      
     </>
   );
 };

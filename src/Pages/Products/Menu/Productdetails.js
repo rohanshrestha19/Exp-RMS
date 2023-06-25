@@ -19,20 +19,19 @@ const Productdetails = () => {
   const menu = menuData.find((menu) => menu.id === id);
   const { menuname, menuprice, menudescription, menuimageurl } = menu;
 
-  const [quantity ,setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState(1);
 
-  const handleDecrement =()=>{
-    if(quantity > 1){
-    setQuantity(preCount => preCount -1);
+  const handleDecrement = () => {
+    if (quantity > 1) {
+      setQuantity((preCount) => preCount - 1);
     }
-    }
+  };
 
-    const handleIncrement =()=>{
-      if(quantity < 20){
-      setQuantity(preCount => preCount + 1);
-      }
-      }
-    
+  const handleIncrement = () => {
+    if (quantity < 20) {
+      setQuantity((preCount) => preCount + 1);
+    }
+  };
 
   return (
     <>
@@ -56,16 +55,26 @@ const Productdetails = () => {
               </div>
 
               <h2 className="product-price1">{menuprice}</h2>
-             
 
               <div className="quantity">
                 <h1>Quantity</h1>
               </div>
               <div className="input-group">
-                <button type="button" onClick={ handleDecrement} className="input-group-text">-</button>
+                <button
+                  type="button"
+                  onClick={handleDecrement}
+                  className="input-group-text"
+                >
+                  -
+                </button>
                 <div className="form-control text-center">{quantity}</div>
-                <button type="button" onClick={handleIncrement} className="input-group-text">+</button>
-
+                <button
+                  type="button"
+                  onClick={handleIncrement}
+                  className="input-group-text"
+                >
+                  +
+                </button>
               </div>
 
               <Link to="/cart" className="pcart-button">

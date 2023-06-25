@@ -3,11 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Categories from "../../Categories";
 
-
 const Momo = ({ momoDataItem }) => {
-
- 
-
   return (
     <>
       <Categories />
@@ -35,8 +31,6 @@ const Momo = ({ momoDataItem }) => {
           ))}
         </div>
       </div>
-
-      
     </>
   );
 };
