@@ -1,9 +1,8 @@
 import React from "react";
 
 import AboutBackgroundImage from "../Asset/AboutBackgroundImage.svg";
+import AboutImage from "../Asset/About.svg";
 import Team from "./Team";
-
-
 
 const About = () => {
   return (
@@ -14,25 +13,26 @@ const About = () => {
         </div>
         <div className="about-section-text-container">
           <h1 className="primary-heading">Online Food Delivery</h1>
-          <p className="primary-text">
+          <p className="primary-text d-flex justify-content-start">
             Lorem ipsum dolor sit amet consectetur. Non tincidunt magna non et
             elit. Dolor turpis molestie dui magnis facilisis at fringilla quam.
+            Lorem ipsum dolor sit amet consectetur.
           </p>
           <p className="primary-text">
             Non tincidunt magna non et elit. Dolor turpis molestie dui magnis
-            facilisis at fringilla quam.
+            facilisis at fringilla quam.Non tincidunt magna non et elit. Dolor
+            turpis molestie dui magnis facilisis at.
           </p>
-          <div className="about-buttons-container">
-            <button className="secondary-button">Learn More</button>
-          </div>
         </div>
       </div>
-      <Team />
 
-     
-      </div>
-      
    
+        
+          
+      
+
+      <Team />
+    </div>
   );
 };
 

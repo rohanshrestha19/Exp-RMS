@@ -117,14 +117,21 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
+import { menuData } from "../../Data/data";
 // import HomeIcon from "@mui/icons-material/Home";
 
 const Categories = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const menuOptions = [
     {
+      text: "All",
+
+      path: "/",
+    },
+
+    {
       text: "Top Selling",
-      
+
       path: "/",
     },
     {
@@ -152,54 +159,68 @@ const Categories = () => {
       path: "/",
     },
   ];
-  return (
- 
 
-<>
-<Navbar />
-      <div
-        className="sidebar border-top border-end bg-white .d-none .d-sm-block .d-md-none"
-      >
-        
+  const [ setmenuDataItem] = useState(menuData);
+
+
+  const filtermenuDataItem = (menuCategory) => {
+      const filteredmenuDataItems = menuData.filter((currentElement) => {
+          return currentElement.menuCategory === menuCategory;
+      })
+      setmenuDataItem(filteredmenuDataItems);
+  }
+
+  return (
+    <>
+      <Navbar />
+      <div className="sidebar border-top border-end bg-white .d-none .d-sm-block .d-md-none">
         <ul className="sidebar-nav">
-        <div className="nav-link border-bottom border-dark">
-              <span>Categories</span>
-            </div>
+          <div className="nav-link border-bottom border-dark">
+            <span>Categories</span>
+          </div>
+
+          <button className="nav-link border-bottom border-dark" type="button"
+         onClick={() => setmenuDataItem(menuData)}
           
-            <Link className="nav-link border-bottom border-dark" to="/">
-              <span>Top Selling</span>
-            </Link>
-          
-       
-            <Link className="nav-link border-bottom border-dark" to="/">
-              <span>Momo</span>
-            </Link>
-        
-          
-            <Link className="nav-link border-bottom border-dark" to="/">
-              <span>Burger</span>
-            </Link>
-          
-       
-            <Link className="nav-link border-bottom border-dark" to="/">
-              <span>Spring Roll</span>
-            </Link>
-         
-          
-            <Link className="nav-link border-bottom border-dark" to="/">
-              <span>Appetizer</span>
-            </Link>
-        
-          
-            <Link className="nav-link border-bottom border-dark" to="/">
-              <span className="navTabs">Beverage</span>
-            </Link>
-          
+          >
+            <span>All</span>
+
+          </button>  
+
+
+          <button className="nav-link border-bottom border-dark" 
+          onClick={() => filtermenuDataItem("Top Selling")}
+          >
+            <span>Top Selling</span>
+          </button>
+
+          <button className="nav-link border-bottom border-dark"
+          onClick={() => filtermenuDataItem("Momo")}
+          >
+            Momo
+          </button>
+
+          <Link className="nav-link border-bottom border-dark">
+            <span>Burger</span>
+          </Link>
+
+          <Link className="nav-link border-bottom border-dark" to="/">
+            <span>Spring Roll</span>
+          </Link>
+
+          <Link className="nav-link border-bottom border-dark" to="/">
+            <span>Appetizer</span>
+          </Link>
+
+          <Link className="nav-link border-bottom border-dark" to="/">
+            <span className="navTabs">Beverage</span>
+          </Link>
         </ul>
       </div>
 
       <div className="navbar-menu-container">
-        <HiOutlineSquaresPlus onClick={() => setOpenMenu(true)} />Categories
+        <HiOutlineSquaresPlus onClick={() => setOpenMenu(true)} />
+        Categories
       </div>
       <Drawer open={openMenu} onClose={() => setOpenMenu(false)} anchor="left">
         <Box
@@ -223,7 +244,7 @@ const Categories = () => {
         </Box>
       </Drawer>
       <Outlet />
-   </>
+    </>
   );
 };
 

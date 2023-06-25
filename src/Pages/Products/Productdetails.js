@@ -1,58 +1,85 @@
+import React from "react";
+import { useState } from "react";
 import Navbar from "../../Components/Navbar";
 import Products from "./Products";
 import Footer from "../Footer";
-import BannerImage from "../../Asset/food.jpeg";
+
+import { useParams } from "react-router-dom";
+
 import { Link } from "react-router-dom";
 import { AiFillStar } from "react-icons/ai";
+import Box from "@mui/material/Box";
+import Rating from "@mui/material/Rating";
+import { menuData } from "../../Data/data";
 
-const Productdetails = ({ menuDataItem }) => {
+const Productdetails = () => {
+  const [value, setValue] = React.useState(2);
+
+  const { id } = useParams();
+  const menu = menuData.find((menu) => menu.id === id);
+  const { menuname, menuprice, menudescription, menuimageurl } = menu;
+
+  const [quantity ,setQuantity] = useState(1);
+
+  const handleDecrement =()=>{
+    if(quantity > 1){
+    setQuantity(preCount => preCount -1);
+    }
+    }
+
+    const handleIncrement =()=>{
+      if(quantity < 20){
+      setQuantity(preCount => preCount + 1);
+      }
+      }
+    
+
   return (
     <>
       <div className="home-container">
         <Navbar />
-        {menuDataItem.map((props) => (
-        <div className="productdetails-container" key={props.id}>
-       
-            <div className="productdetails-section-container" >
-           
-              <div className="productdetails-section-image-container">
-                <img src={props.menuimageurl} alt="" />
-              </div>
-              <div className="productdetails-section-text-container">
-                  <h1 className="primary-heading">{props.menuname}</h1>
-                  <p className="primary-text">{props.menudescription}</p>
 
-                  <h2 className="product-price1">{props.menuprice}</h2>
-                  <div className="stars-container">
-                    <AiFillStar />
-                    <AiFillStar />
-                    <AiFillStar />
-                    <AiFillStar />
-                    <AiFillStar />
-                  </div>
-
-                  <div className="quantity">
-                    <h1>Quantity</h1>
-                  </div>
-
-                  <Link
-                    to="/cart"
-                    className="pcart-button"
-                  >
-                    Add to Cart
-                  </Link>
-                </div>
-              
-
+        <div className="productdetails-container">
+          <div className="productdetails-section-container">
+            <div className="productdetails-section-image-container">
+              <img src={menuimageurl} alt="" />
             </div>
-            
+            <div className="productdetails-section-text-container">
+              <h1 className="primary-heading">{menuname}</h1>
+              <p className="primary-text">{menudescription}</p>
+              <div className="stars-container">
+                <AiFillStar />
+                <AiFillStar />
+                <AiFillStar />
+                <AiFillStar />
+                <AiFillStar />
+              </div>
+
+              <h2 className="product-price1">{menuprice}</h2>
+             
+
+              <div className="quantity">
+                <h1>Quantity</h1>
+              </div>
+              <div className="input-group">
+                <button type="button" onClick={ handleDecrement} className="input-group-text">-</button>
+                <div className="form-control text-center">{quantity}</div>
+                <button type="button" onClick={handleIncrement} className="input-group-text">+</button>
+
+              </div>
+
+              <Link to="/cart" className="pcart-button">
+                Add to Cart
+              </Link>
+            </div>
+          </div>
         </div>
-))}
+
         <div>
           <h1 className="description-heading ">Feedback</h1>
           <div className="review pt-4">
             <h5 className="user__name mb-1">Bina</h5>
-            <div className="feedback-stars-container">
+            <div className="stars-container">
               <AiFillStar />
               <AiFillStar />
               <AiFillStar />
@@ -65,8 +92,23 @@ const Productdetails = ({ menuDataItem }) => {
             </p>
           </div>
           <div className="review">
+            <h5 className="user__name mb-1">Krishna</h5>
+            <div className="stars-container">
+              <AiFillStar />
+              <AiFillStar />
+              <AiFillStar />
+              <AiFillStar />
+              <AiFillStar />
+            </div>
+
+            <p className="feedback__text">
+              Momo here is Fabulous..I would really recommend MOMO from
+              here...Gonna order more from here
+            </p>
+          </div>
+          <div className="review">
             <h5 className="user__name mb-0">Bishweshwor</h5>
-            <div className="feedback-stars-container">
+            <div className="stars-container">
               <AiFillStar />
               <AiFillStar />
               <AiFillStar />
@@ -112,11 +154,19 @@ const Productdetails = ({ menuDataItem }) => {
           <h1>Rate Food</h1>
 
           <div className="stars-container">
-            <AiFillStar />
-            <AiFillStar />
-            <AiFillStar />
-            <AiFillStar />
-            <AiFillStar />
+            <Box
+              sx={{
+                "& > legend": { mt: 2 },
+              }}
+            />
+
+            <Rating
+              name="simple-controlled"
+              value={value}
+              onChange={(event, newValue) => {
+                setValue(newValue);
+              }}
+            />
           </div>
 
           <Link

@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { BsCart2 } from "react-icons/bs";
 import { HiOutlineBars3 } from "react-icons/hi2";
+import { BsFillPersonFill } from "react-icons/bs";
+
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
@@ -14,12 +16,11 @@ import ListItemText from "@mui/material/ListItemText";
 import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";
 import RestaurantMenuIcon from "@mui/icons-material/RestaurantMenu";
-
 import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
-import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
-import PersonIcon from "@mui/icons-material/Person";
+import PhotoLibrary from "@mui/icons-material/PhotoLibrary";
 
 const Navbar = () => {
+  
   const [openMenu, setOpenMenu] = useState(false);
   const menuOptions = [
     {
@@ -38,20 +39,17 @@ const Navbar = () => {
       path: "/menu",
     },
     {
+      text: "Gallery",
+      icon: <PhotoLibrary/>,
+      path: "/gallery",
+    },
+    {
       text: "Contact",
       icon: <PhoneRoundedIcon />,
       path: "/contact",
     },
-    {
-      text: "Cart",
-      icon: <ShoppingCartRoundedIcon />,
-      path: "/cart",
-    },
-    {
-      text: "Login",
-      icon: <PersonIcon />,
-      path: "/login"
-    },
+   
+    
   ];
   return (
     <nav>
@@ -76,8 +74,12 @@ const Navbar = () => {
 
       <div className="navbar-menu-container">
       <Link to="/cart">
-          <BsCart2 className="navbar-cart-icon" />
+          <BsCart2 className="navbar-icon" />
         </Link>
+        <Link to="/login">
+          <BsFillPersonFill className="navbar-icon" />
+        </Link>
+
         <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
       </div>
       

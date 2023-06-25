@@ -3,7 +3,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import Login from "./Login/Login";
-import Cart from "./Pages/Cart";
+import Cart from "./Pages/Cart/Cart";
 import Home from "./Components/Home";
 
 import Menu from "./Pages/Products/Menu";
@@ -26,6 +26,7 @@ import Categories from "./Pages/Products/Categories";
 import Bookatable from "./Pages/Bookatable";
 import { menuData } from "./Data/data";
 
+
 function App() {
   return (
     <div className="App">
@@ -43,7 +44,7 @@ function App() {
           
           <Route path="menu" element={<Menu menuDataItem={menuData} />} />
           <Route path="cart" element={<Cart />} />
-          <Route path="productsdetails" element={<Productdetails menuDataItem={menuData}/>} />
+          <Route path="productdetails/:id" element={<Productdetails menuDataItem={menuData}/>} />
           
           <Route path="Team" element={<Team />} />
           <Route path="testimonial" element={<Testimonial />} />
@@ -53,7 +54,7 @@ function App() {
           <Route path="otp" element={<Otp />} />
           
           <Route path="*" element={<Error />} />
-          <Route path="categories" element={<Categories />} />
+          <Route path="categories" element={<Categories menuDataItem={menuData} />} />
           <Route path="bookatable" element={<Bookatable />} />
 
         </Routes>

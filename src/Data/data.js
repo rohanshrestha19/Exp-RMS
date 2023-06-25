@@ -1,4 +1,4 @@
-import Demo from "../Asset/Img1.jpg";
+import Momo from "../Asset/ProductImg/Momo.jpg";
 
 
 export const responsive = {
@@ -92,25 +92,29 @@ export const productData = [
 ];
 
 
+
+
 export const menuData = [
   {
-    id: 1,
-    menuimageurl: Demo,
-    menuname: "Food",
-    menuprice: "199",
+    id: "1",
+    menuimageurl: Momo,
+    menuCategory:"Momo",
+    menuname: "Stream Momo",
+    menuprice: "170",
     menudescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. lit vero facere mollitia.",
     
   },
   {
-    id: 2,
+    id: "2",
     menuimageurl:"",
+    menuCategory:"Top Selling",
     menuname: "Drinks",
     menuprice: "199",
     menudescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. lit vero facere mollitia.",
     
   },
   {
-    id: 3,
+    id: "3",
     menuimageurl:"",
     menuname: "Breakfast",
     menuprice: "199",
@@ -118,28 +122,28 @@ export const menuData = [
     
   },
   {
-    id: 4,
+    id: "4",
     menuimageurl:"",
     menuname: "Food",
     menuprice: "199",
     menudescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. lit vero facere mollitia.",
   },
   {
-    id: 5,
+    id: "5",
     menuimageurl:"",
     menuname: "Food",
     menuprice: "199",
     menudescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. lit vero facere mollitia.",
   },
   {
-    id: 6,
+    id: "6",
     menuimageurl:"",
     menuname: "Drink",
     menuprice: "199",
     menudescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. lit vero facere mollitia.",
   },
   {
-    id: 7,
+    id: "7",
     menuimageurl:"",
     menuname: "Breakfast",
     menuprice: "199",
@@ -147,7 +151,7 @@ export const menuData = [
   },
 
   {
-    id: 8,
+    id: "8",
     menuimageurl:"",
     menuname: "Breakfast",
     menuprice: "199",
