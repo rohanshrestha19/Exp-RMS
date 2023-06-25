@@ -6,11 +6,11 @@ import Login from "./Login/Login";
 import Cart from "./Pages/Cart/Cart";
 import Home from "./Components/Home";
 
-import Menu from "./Pages/Products/Menu";
-import Products from "./Pages/Products/Products";
+import Menu from "./Pages/Products/Menu/Menu";
+import Products from "./Pages/Products/Menu/Products";
 import Profile from "./Pages/Profile";
 import Gallery from "./Pages/Gallery";
-import Productdetails from "./Pages/Products/Productdetails";
+import Productdetails from "./Pages/Products/Menu/Productdetails";
 import Error from "./Pages/Error";
 import Team from "./Pages/Team";
 import Feature from "./Pages/Feature";
@@ -18,7 +18,7 @@ import Feature from "./Pages/Feature";
 import Testimonial from "./Pages/Testimonial";
 
 import About from "./Pages/About";
-import Product from "./Pages/Products/Product";
+import Product from "./Pages/Products/Menu/Product";
 import Register from "./Login/Register";
 import ForgetPassword from "./Login/ForgetPassword";
 import Otp from "./Login/Otp";
@@ -27,8 +27,8 @@ import Bookatable from "./Pages/Bookatable";
 import { menuData } from "./Data/data";
 import { momoData } from "./Data/categorydata";
 
-import Momo from "./Pages/Products/Category/Momo";
-
+import Momo from "./Pages/Products/Category/Momo/Momo";
+import Momodetails from "./Pages/Products/Category/Momo/Momodetails"
 
 function App() {
   return (
@@ -48,7 +48,10 @@ function App() {
           
           <Route path="menu" element={<Menu menuDataItem={menuData} />} />
           <Route path="cart" element={<Cart />} />
+
           <Route path="productdetails/:id" element={<Productdetails menuDataItem={menuData}/>} />
+          <Route path="momodetails/:id" element={<Momodetails momoDataItem={momoData}/>} />
+
           <Route path="momo" element={<Momo momoDataItem={momoData}/>} />
           
           <Route path="Team" element={<Team />} />

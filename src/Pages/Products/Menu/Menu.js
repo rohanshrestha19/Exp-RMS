@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 import Categories from "../Categories";
 
 
-const Momo = ({ momoDataItem }) => {
+const Menu = ({ menuDataItem }) => {
   return (
     <>
       <Categories />
 
-      <div className="row m-0 p-4">
+      <div className="row m-5 p-4">
         <div className="all-products">
-          {momoDataItem.map((props) => (
+          {menuDataItem.map((props) => (
             <div className="product" key={props.id}>
               <img src={props.menuimageurl} alt="" />
               <div className="product-info">
@@ -36,4 +36,4 @@ const Momo = ({ momoDataItem }) => {
   );
 };
 
-export default Momo;
+export default Menu;

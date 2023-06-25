@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import Navbar from "../../Components/Navbar";
+import Navbar from "../../../Components/Navbar";
 import Products from "./Products";
-import Footer from "../Footer";
+import Footer from "../../Footer";
 
 import { useParams } from "react-router-dom";
 
@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import { AiFillStar } from "react-icons/ai";
 import Box from "@mui/material/Box";
 import Rating from "@mui/material/Rating";
-import { menuData } from "../../Data/data";
+import { menuData } from "../../../Data/data";
 
 const Productdetails = () => {
   const [value, setValue] = React.useState(2);

@@ -10,9 +10,9 @@ import { productData, responsive } from "../Data/data.js";
 import Navbar from "./Navbar";
 
 import Work from "../Pages/Work";
-import Products from "../Pages/Products/Products";
+import Products from "../Pages/Products/Menu/Products";
 import Feature from "../Pages/Feature";
-import Product from "../Pages/Products/Product";
+import Product from "../Pages/Products/Menu/Product";
 
 
 

@@ -132,7 +132,7 @@ const Categories = () => {
     {
       text: "Top Selling",
 
-      path: "/",
+      path: "/top selling",
     },
     {
       text: "Momo",
@@ -142,21 +142,21 @@ const Categories = () => {
     {
       text: "Burger",
 
-      path: "/",
+      path: "/burger",
     },
     {
       text: "Spring Roll",
 
-      path: "/",
+      path: "/springroll",
     },
     {
       text: "Appetizer",
-      path: "/",
+      path: "/appetizer",
     },
     {
       text: "Beverage",
 
-      path: "/",
+      path: "/beverage",
     },
   ];
 
@@ -184,7 +184,7 @@ const Categories = () => {
           </Link>  
 
 
-          <Link className="nav-link border-bottom border-dark" to="/">
+          <Link className="nav-link border-bottom border-dark" to="/topselling">
             <span>Top Selling</span>
           </Link>
 
@@ -194,20 +194,20 @@ const Categories = () => {
           </Link>
 
 
-          <Link className="nav-link border-bottom border-dark" to="/">
+          <Link className="nav-link border-bottom border-dark" to="/burger">
             <span>Burger</span>
           </Link>
 
 
-          <Link className="nav-link border-bottom border-dark" to="/">
+          <Link className="nav-link border-bottom border-dark" to="/springroll">
             <span>Spring Roll</span>
           </Link>
 
-          <Link className="nav-link border-bottom border-dark" to="/">
+          <Link className="nav-link border-bottom border-dark" to="/appetizer">
             <span>Appetizer</span>
           </Link>
 
-          <Link className="nav-link border-bottom border-dark" to="/">
+          <Link className="nav-link border-bottom border-dark" to="/beverage">
             <span className="navTabs">Beverage</span>
           </Link>
         </ul>
