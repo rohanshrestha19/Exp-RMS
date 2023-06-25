@@ -61,7 +61,7 @@ function App() {
 
           <Route path="menu" element={<Menu menuDataItem={menuData} />} />
 
-          <Route path="momo" element={<Momo momoDataItem={momoData} />} />
+          <Route path="momo" element={<Momo />} />
 
           <Route path="topselling" element={<Topselling topsellingDataItem={topsellingData} />} />
           <Route path="topsellingdetails/:id" element={<Topsellingdetails topsellingDataItem={topsellingData} />} />

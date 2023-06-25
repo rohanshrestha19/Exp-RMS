@@ -2,8 +2,11 @@ import React from "react";
 import { FaRightLeft } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import Categories from "../Categories";
+import { useState } from "react";
+import { menuData } from "../../../Data/data";
 
-const Menu = ({ menuDataItem }) => {
+const Menu = () => {
+  const [menuDataItem] = useState(menuData)
   return (
     <>
       <Categories />

@@ -59,6 +59,15 @@ export const momoData = [
     momodescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. lit vero facere mollitia.",
   },
+
+  {
+    id: "8",
+    momoimageurl: Momo,
+    momoname: "Platter Momo",
+    momoprice: "399",
+    momodescription:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. lit vero facere mollitia.",
+  },
 ];
 
  export const vmomoData = [
@@ -97,6 +106,43 @@ export const momoData = [
 },
 
 ];
+
+export const bmomoData = [
+  {
+    id: "1",
+    bmomoimageurl: Momo,
+    bmomoCategory:"Momo",
+    bmomoname: "Stream Momo",
+    bmomoprice: "170",
+    bmomodescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. lit vero facere mollitia.",
+    
+  },
+  {
+    id: "2",
+    bmomoimageurl: Momo,
+    bmomoCategory:"C Momo",
+    bmomoname: "C Momo",
+    bmomoprice: "199",
+    bmomodescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. lit vero facere mollitia.",
+    
+  },
+  {
+    id: "3",
+    bmomoimageurl:Momo,
+    bmomoname: "Fried Momo",
+    bmomoprice: "199",
+    bmomodescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. lit vero facere mollitia.",
+    
+  },
+  {
+    id: "4",
+    bmomoimageurl:Momo,
+    bmomoname: "Sadheko Momo",
+    bmomoprice: "199",
+    bmomodescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. lit vero facere mollitia.",
+  },
+  
+  ];
 
 
 export const topsellingData = [
@@ -160,6 +206,38 @@ export const topsellingData = [
     id: "8",
     tsimageurl:Momo,
     tsname: "Chicken Roll",
+    tsprice: "199",
+    tsdescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. lit vero facere mollitia.",
+  },
+
+  {
+    id: "9",
+    tsimageurl:Momo,
+    tsname: "Chicken Chowmein",
+    tsprice: "199",
+    tsdescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. lit vero facere mollitia.",
+  },
+
+  {
+    id: "10",
+    tsimageurl:Momo,
+    tsname: "French fry",
+    tsprice: "199",
+    tsdescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. lit vero facere mollitia.",
+  },
+
+  {
+    id: "11",
+    tsimageurl:Momo,
+    tsname: "Buff Chilly",
+    tsprice: "199",
+    tsdescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. lit vero facere mollitia.",
+  },
+
+  {
+    id: "12",
+    tsimageurl:Momo,
+    tsname: "Chicken Pakauda",
     tsprice: "199",
     tsdescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. lit vero facere mollitia.",
   },
