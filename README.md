@@ -1,4 +1,4 @@
-# Exp-RMS
+# RMS
 
 Minor Project II 
 
