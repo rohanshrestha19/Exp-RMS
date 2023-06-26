@@ -121,6 +121,11 @@ import ListItemText from "@mui/material/ListItemText";
 // import HomeIcon from "@mui/icons-material/Home";
 
 const Categories = () => {
+
+ 
+
+
+
   const [openMenu, setOpenMenu] = useState(false);
   const menuOptions = [
     {

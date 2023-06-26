@@ -1,5 +1,5 @@
 import React from "react";
-import { FaRightLeft } from "react-icons/fa6";
+
 import { Link } from "react-router-dom";
 import Categories from "../Categories";
 import { useState } from "react";
@@ -10,6 +10,16 @@ const Menu = () => {
   return (
     <>
       <Categories />
+      <div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-mdb-toggle="dropdown" aria-expanded="false">
+    Dropdown
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+    <li><button class="dropdown-item" type="button">Action</button></li>
+    <li><button class="dropdown-item" type="button">Another action</button></li>
+    <li><button class="dropdown-item" type="button">Something else here</button></li>
+  </ul>
+</div>
       <div className="row m-0 p-4">
 
       <div class="all-products">
@@ -17,6 +27,7 @@ const Menu = () => {
         </div>
       <div className="all-products">
         {menuDataItem.map((props) => (
+          
           <div className="product" key={props.id}>
             <img src={props.menuimageurl} alt="" />
             <div className="product-info">
@@ -33,6 +44,7 @@ const Menu = () => {
               </Link>
             </div>
           </div>
+          
         ))}
       </div>
       </div>
